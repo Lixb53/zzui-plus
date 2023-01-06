@@ -114,3 +114,24 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Editor directories and files
+.idea
+
+# Package Manager
+node_modules
+.pnpm-debug.log*
+
+# System
+.DS_Store
+
+# Bundle
+dist
+coverage
+packages/element-plus/version.ts
+
+# local env files
+*.local
+cypress/screenshots/*
+cypress/videos/*
+tmp
