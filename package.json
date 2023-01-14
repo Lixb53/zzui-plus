@@ -5,11 +5,22 @@
     "packages/*",
     "docs"
   ],
-  "scripts": {},
+  "scripts": {
+    "docs:dev": "pnpm run -C docs dev"
+  },
   "peerDependencies": {
     "vue": "^3.2.0"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.182",
+    "@types/lodash-es": "^4.17.6",
+    "@zzui-plus/components": "workspace:^0.0.1",
+    "@zzui-plus/hooks": "workspace:^0.0.1",
+    "@zzui-plus/tokens": "workspace:^0.0.1",
+    "@zzui-plus/utils": "workspace:*",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "lodash-unified": "^1.0.2",
     "prettier": "^2.8.1",
     "pretty-quick": "^3.1.3"
   },
@@ -17,7 +28,11 @@
     "@commitlint/cli": "^17.4.0",
     "@commitlint/config-conventional": "^17.4.0",
     "@esbuild-kit/cjs-loader": "^2.4.1",
+    "@pnpm/find-workspace-packages": "^4.0.18",
+    "@pnpm/logger": "^4.0.0",
+    "@pnpm/types": "^8.10.0",
     "@types/node": "^18.11.18",
+    "@zzui-plus/build-utils": "workspace:^0.0.1",
     "@zzui-plus/eslint-config": "workspace:^0.0.1",
     "eslint": "^8.31.0",
     "eslint-define-config": "^1.13.0",
