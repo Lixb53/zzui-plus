@@ -1,5 +1,10 @@
 import 'normalize.css'
 
+// fro dev
+// reset
+import '../../../packages/theme-chalk/src/reset.scss'
+import '../../../packages/theme-chalk/src/index.scss'
+
 import './styles/app.scss'
 
 import VPDemo from './components/vp-demo.vue'

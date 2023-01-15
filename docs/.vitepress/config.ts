@@ -2,7 +2,10 @@ import { mdPlugin, nav, sidebar } from './config/index'
 export default {
   title: 'zzui-plus',
   themeConfig: {
-    siteTitle: 'zzui-plus',
+    editLinks: true,
+    editLinkText: 'Edit this page on GitHub',
+    lastUpdated: 'Last Updated',
+
     nav,
     sidebar,
   },

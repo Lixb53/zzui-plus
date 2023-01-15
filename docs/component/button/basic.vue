@@ -9,40 +9,41 @@ import {
 } from '@element-plus/icons-vue'
 </script>
 <template>
-  <zz-button />
   <el-row class="mb-4">
-    <el-button>Default</el-button>
-    <el-button type="primary">Primary</el-button>
-    <el-button type="success">Success</el-button>
-    <el-button type="info">Info</el-button>
-    <el-button type="warning">Warning</el-button>
-    <el-button type="danger">Danger</el-button>
+    <zz-button>Default</zz-button>
+    <zz-button type="primary">Primary</zz-button>
+    <zz-button type="success">Success</zz-button>
+    <zz-button type="info">Info</zz-button>
+    <zz-button type="warning">Warning</zz-button>
+    <zz-button type="danger">Danger</zz-button>
   </el-row>
 
   <el-row class="mb-4">
-    <el-button plain>Plain</el-button>
-    <el-button type="primary" plain>Primary</el-button>
-    <el-button type="success" plain>Success</el-button>
-    <el-button type="info" plain>Info</el-button>
-    <el-button type="warning" plain>Warning</el-button>
-    <el-button type="danger" plain>Danger</el-button>
+    <zz-button plain>Plain</zz-button>
+    <zz-button type="primary" plain>Primary</zz-button>
+    <zz-button type="success" plain>Success</zz-button>
+    <zz-button type="info" plain>Info</zz-button>
+    <zz-button type="warning" plain>Warning</zz-button>
+    <zz-button type="danger" plain>Danger</zz-button>
   </el-row>
 
   <el-row class="mb-4">
-    <el-button round>Round</el-button>
-    <el-button type="primary" round>Primary</el-button>
-    <el-button type="success" round>Success</el-button>
-    <el-button type="info" round>Info</el-button>
-    <el-button type="warning" round>Warning</el-button>
-    <el-button type="danger" round>Danger</el-button>
+    <zz-button round>Round</zz-button>
+    <zz-button type="primary" round>Primary</zz-button>
+    <zz-button type="success" round>Success</zz-button>
+    <zz-button type="info" round>Info</zz-button>
+    <zz-button type="warning" round>Warning</zz-button>
+    <zz-button type="danger" round>Danger</zz-button>
   </el-row>
   <el-row>
-    <el-button :icon="Search" circle />
-    <el-button type="primary" :icon="Edit" circle />
-    <el-button type="success" :icon="Check" circle />
-    <el-button type="info" :icon="Message" circle />
-    <el-button type="warning" :icon="Star" circle />
-    <el-button type="danger" :icon="Delete" circle />
+    <zz-button :icon="Search" circle>
+      <zz-icon> <Search /> </zz-icon>
+    </zz-button>
+    <zz-button type="primary" :icon="Edit" circle />
+    <zz-button type="success" :icon="Check" circle />
+    <zz-button type="info" :icon="Message" circle />
+    <zz-button type="warning" :icon="Star" circle />
+    <zz-button type="danger" :icon="Delete" circle />
   </el-row>
 </template>
 <style lang="scss" scoped>
