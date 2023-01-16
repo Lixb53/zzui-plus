@@ -1,0 +1,15 @@
+@mixin utils-cleanFix {
+  $selector: &;
+
+  @at-root {
+    &::before,
+    &::after {
+      display: table;
+      content: "";
+    }
+
+    &::after {
+      clear: both;
+    }
+  }
+}

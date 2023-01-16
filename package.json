@@ -15,6 +15,7 @@
     "@types/lodash": "^4.14.182",
     "@types/lodash-es": "^4.17.6",
     "@zzui-plus/components": "workspace:^0.0.1",
+    "@zzui-plus/constants": "workspace:*",
     "@zzui-plus/hooks": "workspace:^0.0.1",
     "@zzui-plus/theme-chalk": "workspace:^0.1.0",
     "@zzui-plus/tokens": "workspace:^0.0.1",

@@ -36,9 +36,7 @@ import {
     <zz-button type="danger" round>Danger</zz-button>
   </el-row>
   <el-row>
-    <zz-button :icon="Search" circle>
-      <zz-icon> <Search /> </zz-icon>
-    </zz-button>
+    <zz-button :icon="Search" circle />
     <zz-button type="primary" :icon="Edit" circle />
     <zz-button type="success" :icon="Check" circle />
     <zz-button type="info" :icon="Message" circle />

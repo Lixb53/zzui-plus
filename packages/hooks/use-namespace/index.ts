@@ -12,7 +12,7 @@ const _bem = (
 ) => {
   let cls = `${namespace}-${block}`
   if (blockSuffix) {
-    cls += `${blockSuffix}`
+    cls += `-${blockSuffix}`
   }
   if (element) {
     cls += `__${element}`

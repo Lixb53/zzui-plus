@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["Element Plus", "element-plus"],
+  "cSpell.words": ["Zzui Plus", "zzui-plus"],
   "typescript.tsdk": "node_modules/typescript/lib",
   "editor.formatOnSave": true,
   "npm.packageManager": "pnpm",

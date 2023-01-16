@@ -1,4 +1,4 @@
-@use './mixins' as *;
+@use "./mixins" as *;
 
 *,
 ::before,
@@ -48,7 +48,7 @@ h6 {
   line-height: 1.25;
 }
 
-.doc-content {
+.VPDoc {
   h1,
   h2,
   h3,
@@ -98,7 +98,12 @@ h1 {
   font-size: 1.9rem;
 }
 
-@include respond-to('sm') {
+.vp-doc h2 {
+  border-top: none;
+  margin-top: 0;
+}
+
+@include respond-to("sm") {
   h1 {
     font-size: 2.2rem;
   }
@@ -136,7 +141,7 @@ ul {
 a,
 area,
 button,
-[role='button'],
+[role="button"],
 input,
 label,
 select,
@@ -186,7 +191,7 @@ li > ol {
   margin: 0;
 }
 
-.doc-content > div .vp-table {
+.VPDoc > div .vp-table {
   width: 100%;
   overflow-y: hidden;
   overflow-x: auto;
@@ -286,4 +291,8 @@ details {
     border-left: 5px solid var(--el-color-danger);
     margin: 20px 0;
   }
+}
+
+.mb-4 {
+  margin-bottom: 16px;
 }

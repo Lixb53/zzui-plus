@@ -1,2 +1,8 @@
-@use './base.scss';
-@use './scrollbar.scss';
+@use "./base.scss";
+@use "./scrollbar.scss";
+
+.VPDocAside {
+  ul {
+    margin: 0;
+  }
+}

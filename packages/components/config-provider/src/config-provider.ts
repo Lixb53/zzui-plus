@@ -1,8 +1,13 @@
 import { defineComponent, renderSlot } from 'vue'
 import { buildProps } from '@zzui-plus/utils'
+import { useSizeProp } from '@zzui-plus/hooks'
 import type { ExtractPropTypes } from 'vue'
 
 export const configProviderProps = buildProps({
+  /**
+   * @description global component size
+   */
+  size: useSizeProp,
   /**
    * @description global Initial zIndex
    */

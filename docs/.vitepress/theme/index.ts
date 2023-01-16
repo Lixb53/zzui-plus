@@ -3,6 +3,7 @@ import ElementPlus from 'element-plus'
 import ZzuiPlus from 'zzui-plus'
 import 'element-plus/dist/index.css'
 import 'prismjs/themes/prism-funky.min.css'
+import 'uno.css'
 import { globals } from '../vitepress'
 
 import { define } from '../utils/types'

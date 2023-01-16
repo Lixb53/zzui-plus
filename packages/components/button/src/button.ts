@@ -1,4 +1,6 @@
-import { buildProps } from '@zzui-plus/utils'
+import { useSizeProp } from '@zzui-plus/hooks'
+import { buildProps, iconPropType } from '@zzui-plus/utils'
+import { Loading } from '@element-plus/icons-vue'
 
 import type { ExtractPropTypes } from 'vue'
 
@@ -20,6 +22,10 @@ export const buttonTypes = [
 export const buttonNativeTypes = ['button', 'submit', 'reset'] as const
 
 export const buttonProps = buildProps({
+  /**
+   * @description button size
+   */
+  size: useSizeProp,
   /**
    * @description button type
    */
@@ -52,6 +58,54 @@ export const buttonProps = buildProps({
    * @description custom button color, automatically calculate `hover` and `active` color
    */
   color: String,
+  /**
+   * @description icon component
+   */
+  icon: {
+    type: iconPropType,
+  },
+  /**
+   * @description automatically insert a space between two chinese characters
+   */
+  autoInsertSpace: {
+    type: Boolean,
+    default: undefined,
+  },
+  /**
+   * @description disable the button
+   */
+  disabled: Boolean,
+  /**
+   * @description determine whether it's a link button
+   */
+  link: Boolean,
+  /**
+   * @description determine whether it's a text button
+   */
+  text: Boolean,
+  /**
+   * @description determine whether the text button background color is always on
+   */
+  bg: Boolean,
+  /**
+   * @description determine whether it's loading
+   */
+  loading: Boolean,
+  /**
+   * @description customize loading icon component
+   */
+  loadingIcon: {
+    type: iconPropType,
+    default: () => Loading,
+  },
+  /**
+   * @description custom button color, automatically calculate `hover` and `active` color
+   */
+  color: String,
+  /**
+   * @description dark mode, which automatically converts `color` to dark mode colors
+   */
+  dark: Boolean,
 } as const)
 export const buttonEmits = {
   click: (evt: MouseEvent) => evt instanceof MouseEvent,
@@ -62,3 +116,7 @@ export type ButtonEmits = typeof buttonEmits
 
 export type ButtonType = ButtonProps['type']
 export type ButtonNativeType = ButtonProps['nativeType']
+
+export interface ButtonConfigContext {
+  autoInsertSpace?: boolean
+}

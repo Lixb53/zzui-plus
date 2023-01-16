@@ -2,6 +2,7 @@ import path from 'path'
 import { defineConfig, loadEnv } from 'vite'
 import VueMacros from 'unplugin-vue-macros/vite'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import UnoCSS from 'unocss/vite'
 
 import glob from 'fast-glob'
 
@@ -66,6 +67,7 @@ export default defineConfig(async ({ mode }) => {
           vueJsx: vueJsx(),
         },
       }),
+      UnoCSS(),
     ],
     optimizeDeps: {
       include: optimizeDeps,
