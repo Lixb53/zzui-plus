@@ -1,0 +1,5 @@
+export const PKG_PREFIX = '@zzui'
+export const PKG_NAME = 'zzui'
+export const PKG_CAMELCASE_NAME = 'Zzui'
+export const PKG_CAMELCASE_LOCAL_NAME = 'ZzuiLocale'
+export const PKG_BRAND_NAME = 'Zzui'

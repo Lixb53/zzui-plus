@@ -1,2 +1,2 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/el-button.css'
+import '@zzui-plus/components/base/style/css'
+import '@zzui-plus/theme-chalk/el-button.css'
