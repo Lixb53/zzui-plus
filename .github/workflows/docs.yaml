@@ -1,0 +1,30 @@
+name: site
+on:
+  push:
+    # tags: 如果发包的时候打了一个 tag, tag 是以 site 开头的, 表示这是一个站点, 需要单独部署
+    tags:
+      - site*
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: pnpm install --no-frozen-lockfile
+      - run: pnpm docs:build
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          # 部署到 gh-pages 分支
+          target_branch: gh-pages
+          # 部署目录为 vitepress 的默认输出目录
+          build_dir: docs/.vitepress/dist
+        env:
+          # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
