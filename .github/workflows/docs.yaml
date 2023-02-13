@@ -1,11 +1,11 @@
-name: site
+name: docs
 on:
   push:
-    # tags: 如果发包的时候打了一个 tag, tag 是以 site 开头的, 表示这是一个站点, 需要单独部署
+    # tags: 如果发包的时候打了一个 tag, tag 是以 docs 开头的, 表示这是一个站点, 需要单独部署
     tags:
-      - site*
+      - docs*
 jobs:
-  site:
+  docs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
