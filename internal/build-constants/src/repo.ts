@@ -1,4 +1,4 @@
-export const REPO_OWNER = 'zzui'
-export const REPO_NAME = 'zzui'
+export const REPO_OWNER = 'zzui-plus'
+export const REPO_NAME = 'zzui-plus'
 export const REPO_PATH = `${REPO_OWNER}/${REPO_NAME}`
-export const REPO_BRANCH = 'dev'
+export const REPO_BRANCH = 'main'
