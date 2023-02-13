@@ -1,6 +1,4 @@
 {
-    "root": true,
-    "extends": [
-        "@zzui-plus/eslint-config"
-    ]
+  "root": true,
+  "extends": ["@zzui-plus/eslint-config"]
 }

@@ -99,10 +99,6 @@ export const buttonProps = buildProps({
     default: () => Loading,
   },
   /**
-   * @description custom button color, automatically calculate `hover` and `active` color
-   */
-  color: String,
-  /**
    * @description dark mode, which automatically converts `color` to dark mode colors
    */
   dark: Boolean,

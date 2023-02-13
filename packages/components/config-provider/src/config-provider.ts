@@ -1,6 +1,7 @@
 import { defineComponent, renderSlot } from 'vue'
-import { buildProps } from '@zzui-plus/utils'
+import { buildProps, definePropType } from '@zzui-plus/utils'
 import { useSizeProp } from '@zzui-plus/hooks'
+import type { ButtonConfigContext } from '@zzui-plus/components/button'
 import type { ExtractPropTypes } from 'vue'
 
 export const configProviderProps = buildProps({
@@ -18,6 +19,12 @@ export const configProviderProps = buildProps({
   namespace: {
     type: String,
     default: 'zz',
+  },
+  /**
+   * @description button related configuration, [see the following table](#button-attributes)
+   */
+  button: {
+    type: definePropType<ButtonConfigContext>(Object),
   },
 } as const)
 export type ConfigProviderProps = ExtractPropTypes<typeof configProviderProps>

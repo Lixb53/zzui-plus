@@ -6,10 +6,15 @@
     "docs"
   ],
   "scripts": {
+    "build": "pnpm run -C internal/build start",
+    "build:theme": "pnpm run -C packages/theme-chalk build",
     "clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
     "clean:dist": "rimraf dist",
     "docs:dev": "pnpm run -C docs dev",
-    "docs:build": "pnpm run -C docs build"
+    "docs:build": "pnpm run -C docs build",
+    "stub": "pnpm run -r --parallel stub",
+    "prepare": "husky install",
+    "postinstall": "pnpm stub && concurrently \"pnpm gen:version\" \"pnpm run -C internal/metadata dev\""
   },
   "peerDependencies": {
     "vue": "^3.2.0"

@@ -1,5 +1,5 @@
 declare global {
-  interface process {
+  const process: {
     env: {
       NODE_ENV: string
     }
