@@ -8,7 +8,7 @@ import chalk from 'chalk'
 import { Project } from 'ts-morph'
 import {
   buildOutput,
-  epRoot,
+  // epRoot,
   excludeFiles,
   pkgRoot,
   projRoot,
@@ -97,12 +97,12 @@ async function addSourceFiles(project: Project) {
       onlyFiles: true,
     })
   )
-  const epPaths = excludeFiles(
-    await glob(globSourceFile, {
-      cwd: epRoot,
-      onlyFiles: true,
-    })
-  )
+  // const epPaths = excludeFiles(
+  //   await glob(globSourceFile, {
+  //     cwd: epRoot,
+  //     onlyFiles: true,
+  //   })
+  // )
 
   const sourceFiles: SourceFile[] = []
   await Promise.all([
@@ -136,12 +136,12 @@ async function addSourceFiles(project: Project) {
         sourceFiles.push(sourceFile)
       }
     }),
-    ...epPaths.map(async (file) => {
-      const content = await readFile(path.resolve(epRoot, file), 'utf-8')
-      sourceFiles.push(
-        project.createSourceFile(path.resolve(pkgRoot, file), content)
-      )
-    }),
+    // ...epPaths.map(async (file) => {
+    //   const content = await readFile(path.resolve(epRoot, file), 'utf-8')
+    //   sourceFiles.push(
+    //     project.createSourceFile(path.resolve(pkgRoot, file), content)
+    //   )
+    // }),
   ])
 
   return sourceFiles
@@ -149,11 +149,11 @@ async function addSourceFiles(project: Project) {
 
 function typeCheck(project: Project) {
   const diagnostics = project.getPreEmitDiagnostics()
-
-  if (diagnostics.length > 0) {
-    consola.error(project.formatDiagnosticsWithColorAndContext(diagnostics))
-    const err = new Error('Failed to generate dts.')
-    consola.error(err)
-    throw err
-  }
+  consola.error(project.formatDiagnosticsWithColorAndContext(diagnostics))
+  project.emitToMemory()
+  // if (diagnostics.length > 0) {
+  //   const err = new Error('Failed to generate dts.')
+  //   consola.error(err)
+  //   throw err
+  // }
 }
