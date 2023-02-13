@@ -2,12 +2,7 @@ import path from 'path'
 import { copyFile, mkdir } from 'fs/promises'
 import { copy } from 'fs-extra'
 import { parallel, series } from 'gulp'
-import {
-  buildOutput,
-  epOutput,
-  epPackage,
-  projRoot,
-} from '../build-utils/src'
+import { buildOutput, epOutput, epPackage, projRoot } from '../build-utils/src'
 
 import { buildConfig, run, runTask, withTaskName } from './src'
 import type { TaskFunction } from 'gulp'
@@ -30,7 +25,7 @@ export const copyTypesDefinitions: TaskFunction = (done) => {
   const src = path.resolve(buildOutput, 'types')
   const copyTypes = (module: Module) =>
     withTaskName(`copyTypes:${module}`, () =>
-      copy(src, buildConfig[module].output.path, { recursive: true })
+      copy(src, buildConfig[module].output.path)
     )
 
   return parallel(copyTypes('esm'), copyTypes('cjs'))(done)

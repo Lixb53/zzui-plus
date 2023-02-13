@@ -18,7 +18,7 @@ export const vpRoot = resolve(docRoot, '.vitepress')
 
 /** `/dist` */
 export const buildOutput = resolve(projRoot, 'dist')
-/** `/dist/element-plus` */
+/** `/dist/zzui-plus` */
 export const epOutput = resolve(buildOutput, 'zzui-plus')
 
 export const projPackage = resolve(projRoot, 'package.json')

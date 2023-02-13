@@ -8,7 +8,7 @@ export function ZzuiAlias(): Plugin {
   const bundleThemeChalk = `${PKG_NAME}/${themeChalk}` as const
 
   return {
-    name: 'zzui-alias-plugin',
+    name: 'zzui-pllus-alias-plugin',
     resolveId(id) {
       if (!id.startsWith(sourceThemeChalk)) return
       return {

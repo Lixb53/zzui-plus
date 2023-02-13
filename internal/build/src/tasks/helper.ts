@@ -22,7 +22,7 @@ const reComponentName: ReComponentName = (title: string) =>
     .toLowerCase()}`
 
 const reDocUrl: ReDocUrl = (fileName, header) => {
-  const docs = 'https://zzui.org/en-US/component/'
+  const docs = 'https://lixb53.github.io/zzui-plus/'
   const _header = header ? header.replaceAll(/\s+/g, '-').toLowerCase() : ''
 
   return `${docs}${fileName}.html${_header ? '#' : ''}${_header}`
@@ -98,7 +98,7 @@ export const buildHelper: TaskFunction = (done) => {
     version: _version,
     entry: `${path.resolve(
       projRoot,
-      'site/en-US/component'
+      'docs/component'
     )}/!(datetime-picker|message-box|message).md`,
     outDir: epOutput,
     reComponentName,

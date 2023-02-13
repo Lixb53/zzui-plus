@@ -1,5 +1,6 @@
 import { buildRoot } from '@zzui-plus/build-utils'
 import { run } from './process'
+import 'undertaker'
 
 import type { TaskFunction } from 'gulp'
 
