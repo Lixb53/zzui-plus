@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app.8c53539b.js";const m=JSON.parse('{"title":"A Vue 3 UI Framework","description":"","frontmatter":{"title":"A Vue 3 UI Framework","lang":"en-US","page":true},"headers":[],"relativePath":"index.md"}'),r={name:"index.md"};function n(o,s,c,i,d,p){return a(),t("div")}const l=e(r,[["render",n]]);export{m as __pageData,l as default};
