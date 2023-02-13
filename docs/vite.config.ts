@@ -11,7 +11,7 @@ import {
   epPackage,
   getPackageDependencies,
   projRoot,
-} from '@zzui-plus/build-utils'
+} from '../internal/build-utils/src/index'
 
 import type { Alias } from 'vite'
 
