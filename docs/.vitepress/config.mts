@@ -5,6 +5,7 @@ import {
 import { docsDirName } from '../../internal/build-utils/src/index'
 import { mdPlugin, nav, sidebar } from './config/index'
 export default {
+  base: process.env.NODE_ENV === 'production' ? '/zzui-plus/' : '/',
   title: 'zzui-plus',
   appearance: true,
   themeConfig: {
