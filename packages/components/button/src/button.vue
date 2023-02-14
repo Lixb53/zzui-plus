@@ -22,6 +22,19 @@ const handleClick = () => {
   // eslint-disable-next-line no-console
   console.log(_ref.value)
 }
+
+defineExpose({
+  /** @description button html element */
+  ref: _ref,
+  /** @description button size */
+  size: _size,
+  /** @description button type */
+  type: _type,
+  /** @description button disabled */
+  disabled: _disabled,
+  /** @description whether adding space */
+  shouldAddSpace,
+})
 </script>
 
 <template>
