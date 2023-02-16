@@ -11,7 +11,10 @@ export const sidebar = {
   '/component/': [
     {
       text: 'Basic 基础组件',
-      items: [{ text: '按钮', link: '/component/button/' }],
+      items: [
+        { text: '按钮', link: '/component/button/' },
+        { text: 'Scrollbar 滚动条', link: '/component/scrollbar/' },
+      ],
     },
   ],
 }
