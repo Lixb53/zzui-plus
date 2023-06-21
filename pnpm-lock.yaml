@@ -12,6 +12,7 @@ importers:
       '@pnpm/types': ^8.10.0
       '@types/fs-extra': ^11.0.1
       '@types/gulp': ^4.0.10
+      '@types/jsdom': ^21.1.0
       '@types/lodash': ^4.14.182
       '@types/lodash-es': ^4.17.6
       '@types/node': ^18.11.18
@@ -73,6 +74,7 @@ importers:
       '@pnpm/types': 8.10.0
       '@types/fs-extra': 11.0.1
       '@types/gulp': 4.0.10
+      '@types/jsdom': 21.1.0
       '@types/node': 18.13.0
       '@vitejs/plugin-vue': 2.3.4_vue@3.2.47
       '@vitejs/plugin-vue-jsx': 3.0.0_vue@3.2.47
@@ -3021,6 +3023,14 @@ packages:
     resolution: {integrity: sha512-z/QT1XN4K4KYuslS23k62yDIDLwLFkzxOuMplDtObz0+y7VqJCaO2o+SPwHCvLFZh7xazvvoor2tA/hPz9ee7g==}
     dev: true
 
+  /@types/jsdom/21.1.0:
+    resolution: {integrity: sha512-leWreJOdnuIxq9Y70tBVm/bvTuh31DSlF/r4l7Cfi4uhVQqLHD0Q4v301GMisEMwwbMgF7ZKxuZ+Jbd4NcdmRw==}
+    dependencies:
+      '@types/node': 18.13.0
+      '@types/tough-cookie': 4.0.2
+      parse5: 7.1.2
+    dev: true
+
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: false
@@ -3118,6 +3128,10 @@ packages:
     resolution: {integrity: sha512-DPP/jkDaqGiyU75MyMURxLWyYLwKSjnAuGe9ZCsLp9QZOpXmDfuevk769F0BS86TmRuD5krnp06qw9nSoNO+0g==}
     dependencies:
       '@types/node': 18.13.0
+
+  /@types/tough-cookie/4.0.2:
+    resolution: {integrity: sha512-Q5vtl1W5ue16D+nIaW8JWebSSraJVlK+EthKn7e7UcD4KWsaSJ8BqGPXNaPghgtcn/fhvrN17Tv8ksUsQpiplw==}
+    dev: true
 
   /@types/treeify/1.0.0:
     resolution: {integrity: sha512-ONpcZAEYlbPx4EtJwfTyCDQJGUpKf4sEcuySdCVjK5Fj/3vHp5HII1fqa1/+qrsLnpYELCQTfVW/awsGJePoIg==}
