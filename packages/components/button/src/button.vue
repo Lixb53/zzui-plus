@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script lang="ts" setup name="ZzButton">
 import { ref } from 'vue'
 import { useNamespace } from '@zzui-plus/hooks'
 import { buttonEmits, buttonProps } from './button'
@@ -53,8 +53,8 @@ defineExpose({
       ns.is('has-bg', bg),
       ns.is('loading', loading),
     ]"
-    :aria-disabled="_disabled || loading"
-    :disabled="_disabled || loading"
+    :aria-disabled="(_disabled || loading) as boolean"
+    :disabled="(_disabled || loading) as boolean"
     :type="nativeType"
     :style="buttonStyle"
     @click="handleClick"
