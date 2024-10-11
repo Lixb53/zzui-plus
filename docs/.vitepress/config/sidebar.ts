@@ -16,5 +16,12 @@ export const sidebar = {
         { text: 'Scrollbar 滚动条', link: '/component/scrollbar/' },
       ],
     },
+    {
+      text: 'form表单组件',
+      items: [
+        { text: 'Form 表单', link: '/component/form/' },
+        { text: 'input输入框', link: '/component/input/' },
+      ],
+    },
   ],
 }

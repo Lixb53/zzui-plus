@@ -31,23 +31,23 @@ mkdir -p "$DIRNAME/src"
 mkdir -p "$DIRNAME/__tests__"
 
 cat > $DIRNAME/src/$INPUT_NAME.vue <<EOF
-<template>
-  <div>
-    <slot />
-  </div>
-</template>
-
 <script lang="ts" setup>
 import { ${INPUT_NAME}Props } from './$INPUT_NAME'
 
 defineOptions({
-  name: 'El$NAME',
+  name: 'Zz$NAME',
 })
 
 const props = defineProps(${INPUT_NAME}Props)
 
 // init here
 </script>
+
+<template>
+  <div>
+    <slot />
+  </div>
+</template>
 EOF
 
 cat > $DIRNAME/src/$INPUT_NAME.ts <<EOF

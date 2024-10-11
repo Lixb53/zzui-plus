@@ -31,6 +31,9 @@
 
   // --el-border-radius-#{$type}
   @include set-component-css-var("border-radius", $border-radius);
+
+  // common component size
+  @include set-component-css-var('component-size', $common-component-size);
 }
 
 // for light
@@ -55,6 +58,9 @@
   @include set-component-css-var("border-color", $border-color);
   // Fill --el-fill-color-#{$type}
   @include set-component-css-var("fill-color", $fill-color);
+
+  // Disabled base
+  @include set-component-css-var('disabled', $disabled);
 
   // Border
   @include set-css-var-value("border-width", $border-width);

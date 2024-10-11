@@ -1,0 +1,44 @@
+@use 'sass:map';
+
+@use 'mixins/function' as *;
+@use 'mixins/mixins' as *;
+
+$form-item-line-height: () !default;
+$form-item-line-height: map.merge(
+  (
+    'large': 40px,
+    'defualt': 32px,
+    'small': 24px
+
+  ),
+  $form-item-line-height
+);
+
+@include b(form) {
+
+}
+
+@include b(form-item) {
+  display: flex;
+  align-items: center;
+
+  @include e(label-wrap) {
+    display: flex;
+  }
+
+  @include e(label) {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    flex: 0 0 auto;
+    font-size: getCssVar('form-label-font-size');
+    color: getCssVar('text-color', 'regular');
+
+    height: #{map.get($form-item-line-height, 'default')};
+    line-height: #{map.get($form-item-line-height, 'default')};
+
+    padding: 0 12px 0 0 ;
+    box-sizing: border-box;
+  }
+}

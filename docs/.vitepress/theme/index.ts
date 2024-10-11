@@ -9,8 +9,6 @@ import { globals } from '../vitepress'
 import { define } from '../utils/types'
 import type { Theme } from 'vitepress'
 
-console.log(ZzuiPlus, ElementPlus)
-
 export default define<Theme>({
   ...DefaultTheme,
   enhanceApp: ({ app }) => {

@@ -5,6 +5,40 @@
 
 @use "config" as *;
 
+// scroll-bar
+@mixin scroll-bar {
+  $scrollbar-thumb-background: getCssVar('text-color', 'disabled');
+  $scrollbar-track-background: getCssVar('fill-color', 'blank');
+
+  &::-webkit-scrollbar {
+    z-index: 11;
+    width: 6px;
+
+    &:horizontal {
+      height: 6px;
+    }
+
+    &-thumb {
+      border-radius: 5px;
+      width: 6px;
+      background: $scrollbar-thumb-background;
+    }
+
+    &-corner{
+      background: $scrollbar-track-background;
+    }
+
+    &-track {
+      background: $scrollbar-track-background;
+
+      &-piece {
+        background: $scrollbar-track-background;
+        width: 6px;
+      }
+    }
+  }
+}
+
 @mixin b($block) {
   $B: $namespace + "-" + $block !global;
 
@@ -66,5 +100,14 @@
     @include b($block) {
       @content;
     }
+  }
+}
+
+
+@mixin inset-input-border($color, $important: false) {
+  @if $important == true {
+    box-shadow: 0 0 0 1px $color inset !important;
+  } @else {
+    box-shadow: 0 0 0 1px $color inset;
   }
 }

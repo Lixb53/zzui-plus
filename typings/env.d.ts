@@ -1,4 +1,7 @@
+import type { VNode } from 'vue'
 import type { INSTALLED_KEY } from '@zzui-plus/constants'
+
+declare type VueNode = VNode
 
 declare global {
   const process: {
@@ -11,6 +14,9 @@ declare global {
     interface IntrinsicAttributes {
       class?: any
       style?: any
+    }
+    interface IntrinsicElements {
+      [elem: string]: unknown
     }
   }
 }
